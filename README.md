@@ -25,7 +25,7 @@
 
 ## 💻 Installation
 
-- If these instructions are too hard, Vencord modding is not for you. However, if you need anything, you can dm me (1245051294364864588) on Discord.
+- If these instructions are too hard, Vencord modding is not for you. However, if you need anything, you can dm me `1245051294364864588` on Discord.
 
 1. Download and unzip the latest release from releases.
 2. Place the `TornStatusDisplay` folder in your Vencord `plugins` directory:
