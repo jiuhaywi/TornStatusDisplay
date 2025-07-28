@@ -1,6 +1,6 @@
 # TornStatusDisplay
 
-**TornStatusDisplay** is a [Vencord](https://vencord.dev) plugin that displays your current [Torn](https://www.torn.com/) status as a custom Discord Rich Presence.
+**TornStatusDisplay** is a standalone Python application that shows your current [Torn](https://www.torn.com/) status using a custom **Discord Rich Presence**.
 
 > See some [Examples](https://github.com/jiuhaywi/TornStatusDisplay/blob/main/Examples.md)
 
@@ -8,46 +8,30 @@
 
 ## 📦 Requirements
 
-- [Vencord](https://docs.vencord.dev/installing) client mod installed (You must have the source version installed for custom userscripts).
-- A Torn API key and your user ID (configured inside the plugin settings panel).
+- [Python 3.9+](https://www.python.org/downloads/)
+- Torn **API key** (Limited) and **User ID**
+- [pypresence](https://pypi.org/project/pypresence/) library, install with bash: `pip install pypresence requests`
 
 ---
 
 ## ⚠️ Disclaimer
 
-> **Use this plugin at your own risk.**
+> Use this tool at your own risk.
 
-- Vencord is a **client modification**, and use of it is **against Discord's Terms of Service**.
-- Use of Vencord Source is harder than normal Vencord, so be very careful when working around files.
-- This plugin uses your Discord account token via the client to update Rich Presence.
-- I am **not responsible** for any consequences that may result from using this plugin. Refer to the license for more info.
+- This application uses the Discord Rich Presence API via a **local connection**, which **should** be safe, however, I am **NOT** responsible for anything which is as a result of using this tool. Refer to the [LICENSE](https://github.com/jiuhaywi/TornStatusDisplay/blob/main/LICENSE) for more info.
+- No data is sent to any external servers, and everything (except contacting Discord and Torn APIs) is local.
 
 ---
 
-## 💻 Installation
+## 💻 Setup Instructions
 
-- If these instructions are too hard, Vencord modding is not for you. However, if you need anything, you can dm me `1245051294364864588` on Discord.
+> This is designed to be a simple tutorial, however, if you need to contact me for any reason, please do so via Direct Messages on discord. `1245051294364864588`
 
-1. Download and unzip the latest **TornStatusDisplay.zip** file from releases.
-2. Place the `TornStatusDisplay` folder in your Vencord's `userplugins`(You might need to make the userplugins folder) `[installLocation]\src\userplugins`
-3. **Rebuild** and **ReInject** your vencord through pnpm.
-4. Download and unzip the latest **TORN_PROXY.zip** file from releases.
-5. Run torn-proxy.js (run `node torn-proxy.js` in a command prompt aimed within the TORN_PROXY folder).
-6. Click the ⚙️ icon to open plugin settings.
-7. Enter your Torn **User ID** and **API Key** (Use a Limited Key).
-8. Enable the plugin in **Vencord Settings → Plugins**.
+1.1 - Setup (Setting up the main python file.)
+1.2 - Application (Setting up your Discord Application)
+1.3 - Credentials (Adding your Keys, and IDs into creds.py)
+1.4 - Done
 
----
 
-## 🛠️ Features
+# 1.1 - Setup
 
-- Updates every 5 minutes with your current Torn status.
-- Displays travel state, hospital/jail status, and travel timers with timestamps.
-- Auto-calculated timers and dynamic updates.
-- Lightweight and local-only — no external servers or data logging.
-
----
-
-## 📚 License
-
-This project is licensed under the MIT License — see `LICENSE` for details.
