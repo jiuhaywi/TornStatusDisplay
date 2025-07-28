@@ -18,6 +18,7 @@
 > **Use this plugin at your own risk.**
 
 - Vencord is a **client modification**, and use of it is **against Discord's Terms of Service**.
+- Use of Vencord Source is harder than normal Vencord, so be very careful when working around files.
 - This plugin uses your Discord account token via the client to update Rich Presence.
 - I am **not responsible** for any consequences that may result from using this plugin. Refer to the license for more info.
 
