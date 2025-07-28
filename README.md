@@ -8,7 +8,7 @@
 
 ## 📦 Requirements
 
-- [Vencord](https://docs.vencord.dev/installing) client mod installed (You must have the source version installed for custom userscripts) and running.
+- [Vencord](https://docs.vencord.dev/installing) client mod installed (You must have the source version installed for custom userscripts).
 - A Torn API key and your user ID (configured inside the plugin settings panel).
 
 ---
