@@ -1,1 +1,1 @@
-.
+# Example use of the plugin.
