@@ -1,6 +1,6 @@
 # TornStatusDisplay
 
-**TornStatusDisplay** is a standalone Python application that shows your current [Torn](https://www.torn.com/) status using a custom **Discord Rich Presence**.
+**TornStatusDisplay** is a standalone Python application that shows your current [Torn](https://www.torn.com/) status using a custom **Discord Rich Presence**. It displays whether you are okay, hospitalised, flying, or abroad (including hospitalised abroad). When you are flying, it displays your current flight time (the green discord text), and your remaining time (shown via the white text). It also displays where you are travelling to. This tool uses one API request every update (every 300s while flying, and 60s while not flying). Therefore, being rate limited for this tool will not be common. This script must be running on the same machine that you are logged into discord on (the discord desktop app only). This project uses the MIT License. Please refer to this [LICENSE](https://github.com/jiuhaywi/TornStatusDisplay/blob/main/LICENSE) before using, sharing, or modifying this project in any way.
 
 > See some [Examples](https://github.com/jiuhaywi/TornStatusDisplay/blob/main/Examples.md)
 
