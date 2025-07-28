@@ -25,7 +25,7 @@
 
 ## 💻 Setup Instructions
 
-> This is designed to be a simple tutorial, however, if you need to contact me for any reason, please do so via Direct Messages on discord. `1245051294364864588`
+> This is designed to be a simple tutorial, however, if you need to contact me for any reason, please do so via Direct Messages on discord. My Discord UserID: `1245051294364864588`
 
 - [1.](https://github.com/jiuhaywi/TornStatusDisplay/blob/main/1.1.md) - Setup (Setting up the main python file.)
 - [2.](https://github.com/jiuhaywi/TornStatusDisplay/blob/main/2.md) - Application (Setting up your Discord Application)
