@@ -1,8 +1,0 @@
-{
-  "name": "TornStatusDisplay",
-  "description": "Shows your current Torn status on your Discord profile.",
-  "version": "1.0.0",
-  "authors": ["1245051294364864588"],
-  "source": "local",
-  "main": "index.ts"
-}
