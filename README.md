@@ -8,7 +8,7 @@
 
 ## 📦 Requirements
 
-- [Vencord](https://vencord.dev) client mod installed and running.
+- [Vencord](https://docs.vencord.dev/installing) client mod installed (You must have the source version installed for custom userscripts) and running.
 - A Torn API key and your user ID (configured inside the plugin settings panel).
 
 ---
@@ -27,13 +27,14 @@
 
 - If these instructions are too hard, Vencord modding is not for you. However, if you need anything, you can dm me `1245051294364864588` on Discord.
 
-1. Download and unzip the latest release from releases.
-2. Place the `TornStatusDisplay` folder in your Vencord `plugins` directory:
-   - Windows: `%appdata%\Vencord\plugins`
-   - Linux/macOS: `~/.config/Vencord/plugins`
-3. Enable the plugin in **Vencord Settings → Plugins**.
-4. Click the ⚙️ icon to open plugin settings.
-5. Enter your Torn **User ID** and **API Key** (Use a Limited Key).
+1. Download and unzip the latest TornStatusDisplay.zip file from releases.
+2. Place the `TornStatusDisplay` folder in your Vencord's `userplugins`(You might need to make the userplugins folder) `[installLocation]\src\userplugins`
+3. **Rebuild** and **ReInject** your vencord through pnpm.
+4. Download and unzip the latest TORN_PROXY.zip file from releases.
+5. Run torn-proxy.js (run `node torn-proxy.js` in a command prompt aimed within the TORN_PROXY folder).
+6. Click the ⚙️ icon to open plugin settings.
+7. Enter your Torn **User ID** and **API Key** (Use a Limited Key).
+8. Enable the plugin in **Vencord Settings → Plugins**.
 
 ---
 
