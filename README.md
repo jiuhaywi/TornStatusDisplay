@@ -17,21 +17,21 @@
 
 > **Use this plugin at your own risk.**
 
-- Vencord is a **client modification**, and using it is **against Discord's Terms of Service**.
+- Vencord is a **client modification**, and use of it is **against Discord's Terms of Service**.
 - This plugin uses your Discord account token via the client to update Rich Presence.
-- I am **not responsible** for any consequences that may result from using this plugin.
+- I am **not responsible** for any consequences that may result from using this plugin. Refer to the license for more info.
 
 ---
 
 ## 💻 Installation
 
-1. Clone or download this repository.
+1. Download and unzip the latest release from releases.
 2. Place the `TornStatusDisplay` folder in your Vencord `plugins` directory:
    - Windows: `%appdata%\Vencord\plugins`
    - Linux/macOS: `~/.config/Vencord/plugins`
 3. Enable the plugin in **Vencord Settings → Plugins**.
 4. Click the ⚙️ icon to open plugin settings.
-5. Enter your Torn **User ID** and **API Key**.
+5. Enter your Torn **User ID** and **API Key** (Use a Limited Key).
 
 ---
 
