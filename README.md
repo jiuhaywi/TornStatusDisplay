@@ -2,7 +2,7 @@
 
 **TornStatusDisplay** is a [Vencord](https://vencord.dev) plugin that displays your current [Torn](https://www.torn.com/) status as a custom Discord Rich Presence.
 
-> Example: `Flying to UK (1h 34m remaining)` — or `Hospitalized, Abroad (UK)`
+> See some [Examples](https://github.com/jiuhaywi/TornStatusDisplay/blob/main/Examples.md)
 
 ---
 
