@@ -27,11 +27,10 @@
 
 > This is designed to be a simple tutorial, however, if you need to contact me for any reason, please do so via Direct Messages on discord. `1245051294364864588`
 
-1.1 - Setup (Setting up the main python file.)
-1.2 - Application (Setting up your Discord Application)
-1.3 - Credentials (Adding your Keys, and IDs into creds.py)
-1.4 - Done
+[1.1]() - Setup (Setting up the main python file.)
+[1.2]() - Application (Setting up your Discord Application)
+[1.3]() - Credentials (Adding your Keys, and IDs into creds.py)
+[1.4]() - Done
 
 
-# 1.1 - Setup
 
