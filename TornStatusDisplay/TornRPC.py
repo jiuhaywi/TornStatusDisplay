@@ -34,20 +34,20 @@ def UpdateFlying(Location, Time, Depart):
             )
             
     
-def UpdateNotFlying(Location, Status):
+def UpdateNotFlying(Location, Status, Name):
     if Location == "Torn":
         RPC.update(
             details="In Torn City!",
-            state="Status: "+Status,
-            large_image="plane-to-left",
+            state="Is currently "+Status+".",
+            large_image="torn-city",
             large_text="Torn City"
             )
     else:   
         RPC.update(
-            details="In "+Location+"!",
-            state="Status: "+Status,
-            large_image="plane-to-left",
-            large_text=Location+" City"
+            details="Abroad, in "+Location+"!",
+            state="Is currently "+Status+".",
+            large_image=Location,
+            large_text=Location
             )
 
 
@@ -89,7 +89,7 @@ while True:
     tmp = tmp+5
     
     if flying == True:
-        time_left -= 1
+        time_left -= 5
         UpdateFlying(destination, time_left, departed)
         if tmp >= 300:
             Update()
