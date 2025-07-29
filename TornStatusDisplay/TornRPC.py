@@ -13,6 +13,7 @@ life = 0
 
 
 def UpdateFlying(Location, Time, Depart):
+    global tmp
     Hours = math.floor(Time/3600)
     Minutes = int(math.floor((Time/60)-(Hours*60)))
     Seconds = int(math.floor((Time)-(Hours*3600))-(Minutes*60))
@@ -34,14 +35,19 @@ def UpdateFlying(Location, Time, Depart):
             large_image="plane-to-right",
             large_text=Location
             )
+    if Time <= 1:
+        tmp = 295
             
     
 def UpdateNotFlying(Location, Status):
     Location2 = Location[:6]
+    Location2 = Location2.lower()
     if Location == "United Kingdom":
         Location2 = "UnitedK"
     if Location == "South Africa":
         Location2 == "South"
+    if Status == "Abroad":
+        Status = "Okay"
     if Location == "Torn":
         RPC.update(
             details="In Torn City!",
@@ -72,7 +78,7 @@ def GetInfo():
     time_left = int(data["travel"]["time_left"])
     departed = int(data["travel"]["departed"])
     timestamp = int(data["travel"]["timestamp"])
-    status = data["basic"]["status"]["state"]
+    status = data["status"]["state"]
     return destination, time_left, departed, timestamp, status
 
 
