@@ -9,6 +9,8 @@ RPC = Presence(client_id)
 tmp = 0
 flying = None
 time_left = 0
+life = 0
+
 
 def UpdateFlying(Location, Time, Depart):
     Hours = math.floor(Time/3600)
@@ -26,7 +28,7 @@ def UpdateFlying(Location, Time, Depart):
     else:
         RPC.update(
             details="Flying to "+Location+"!",
-            state="Time left: "+str(Hours)+"h "+str(Minutes)+"m.",
+            state="Time left: "+str(Hours)+"h "+str(Minutes)+"m "+str(Seconds)+"s.",
             start=time.time() - (int(time.time()) - Depart),
             end=time.time() + Time,
             large_image="plane-to-right",
@@ -34,7 +36,12 @@ def UpdateFlying(Location, Time, Depart):
             )
             
     
-def UpdateNotFlying(Location, Status, Name):
+def UpdateNotFlying(Location, Status):
+    Location2 = Location[:6]
+    if Location == "United Kingdom":
+        Location2 = "UnitedK"
+    if Location == "South Africa":
+        Location2 == "South"
     if Location == "Torn":
         RPC.update(
             details="In Torn City!",
@@ -43,16 +50,17 @@ def UpdateNotFlying(Location, Status, Name):
             large_text="Torn City"
             )
     else:   
+        
         RPC.update(
             details="Abroad, in "+Location+"!",
             state="Is currently "+Status+".",
-            large_image=Location,
+            large_image=Location2,
             large_text=Location
             )
 
 
 def GetInfo():
-    url = f"https://api.torn.com/user/{user_id}?selections=travel&key={api_key}"
+    url = f"https://api.torn.com/user/{user_id}?selections=travel,basic&key={api_key}"
     response = requests.get(url)
     if response.status_code == 200:
         data = response.json()
@@ -64,17 +72,18 @@ def GetInfo():
     time_left = int(data["travel"]["time_left"])
     departed = int(data["travel"]["departed"])
     timestamp = int(data["travel"]["timestamp"])
-    return destination, time_left, departed, timestamp
+    status = data["basic"]["status"]["state"]
+    return destination, time_left, departed, timestamp, status
 
 
 def Update():
-    global flying, time_left, destination, departed
-    destination, time_left, departed, timestamp = GetInfo()
-    Status = "Okay"
+    global flying, time_left, destination, departed, life
+    destination, time_left, departed, timestamp, life = GetInfo()
+    
     print(destination, time_left, departed, timestamp)
     if time_left == 0:
         flying = False
-        UpdateNotFlying(destination, Status)
+        UpdateNotFlying(destination, life)
     else:
         flying = True
         UpdateFlying(destination, time_left, departed)
