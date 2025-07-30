@@ -10,7 +10,7 @@
 
 - [Python 3.9+](https://www.python.org/downloads/)
 - Torn **API key** (Limited) and **User ID**
-- [pypresence](https://pypi.org/project/pypresence/), [customtkinter](https://customtkinter.tomschimansky.com/), and [requests](https://pypi.org/project/requests/). install with bash: `pip install pypresence requests` (This is `requirements.bat`!)
+- [pypresence](https://pypi.org/project/pypresence/), [customtkinter](https://customtkinter.tomschimansky.com/), and [requests](https://pypi.org/project/requests/). install with bash: `pip install pypresence requests customtkinter` (This is `requirements.bat`!)
 
 ---
 
