@@ -2,6 +2,12 @@ from pypresence import Presence
 import time
 import requests
 import math
+import customtkinter
+import json
+import random
+
+with open("resources/settings.tss", "r") as f:
+    settings_data = json.load(f)
 
 
 from creds import client_id, user_id, api_key
@@ -11,12 +17,13 @@ flying = None
 time_left = 0
 life = 0
 
-
 def UpdateFlying(Location, Time, Depart):
     global tmp
     Hours = math.floor(Time/3600)
     Minutes = int(math.floor((Time/60)-(Hours*60)))
     Seconds = int(math.floor((Time)-(Hours*3600))-(Minutes*60))
+    if settings_data["show_time_left"] == "off":
+        Hours, Minutes, Seconds, Depart= 0, 0, 0, random.randint(5, 50)
     if Location == "Torn":
         RPC.update(
             details="Flying back to Torn City!",
@@ -98,9 +105,12 @@ def Update():
 
 
 
+# GUI STUFF
+
 
 RPC.connect()
 Update()
+print("destination", "time_left", "departed", "timestamp")
 while True:
     time.sleep(5)
     tmp = tmp+5
@@ -108,12 +118,12 @@ while True:
     if flying == True:
         time_left -= 5
         UpdateFlying(destination, time_left, departed)
-        if tmp >= 300:
+        if tmp >= settings_data["fly_delay"]:
             Update()
             tmp = 0
 
     else:
-        if tmp >= 60:
+        if tmp >= settings_data["ground_delay"]:
             Update()
             tmp = 0
 
