@@ -41,13 +41,15 @@ def UpdateFlying(Location, Time, Depart):
     
 def UpdateNotFlying(Location, Status):
     Location2 = Location[:6]
-    Location2 = Location2.lower()
     if Location == "United Kingdom":
         Location2 = "UnitedK"
     if Location == "South Africa":
         Location2 == "South"
+    Location2 = Location2.lower()
     if Status == "Abroad":
         Status = "Okay"
+    if Status == "Hospital":
+        Status = "in Hospital"
     if Location == "Torn":
         RPC.update(
             details="In Torn City!",
