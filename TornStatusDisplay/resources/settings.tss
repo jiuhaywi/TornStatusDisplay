@@ -1,5 +1,5 @@
 {
-    "show_time_left": "off",
+    "show_time_left": "on",
     "fly_delay": 300,
     "ground_delay": 60
 }
