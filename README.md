@@ -10,7 +10,7 @@
 
 - [Python 3.9+](https://www.python.org/downloads/)
 - Torn **API key** (Limited) and **User ID**
-- [pypresence](https://pypi.org/project/pypresence/) library, install with bash: `pip install pypresence requests`
+- [pypresence](https://pypi.org/project/pypresence/) library, install with bash: `pip install pypresence requests` (This is `requirements.bat`!)
 
 ---
 
